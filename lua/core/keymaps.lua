@@ -15,18 +15,33 @@ vim.opt.cursorline=true
 -- Set global leader key (optional, but good practice)
 vim.g.mapleader = " "
 
--- --- INDENTATION SETTINGS (4 SPACES) ---
-
--- Set indentation options to use 4 spaces. Change '4' to '2' if preferred.
-
--- 1. `tabstop`: Number of spaces a <Tab> character uses for display.
+--  `tabstop`: Number of spaces a <Tab> character uses for display.
 vim.opt.tabstop = 2
 
--- 2. `shiftwidth`: Number of spaces used for auto-indent (e.g., when pressing Enter or using << / >>).
+--  `shiftwidth`: Number of spaces used for auto-indent (e.g., when pressing Enter or using << / >>).
 vim.opt.shiftwidth = 2
 
--- 3. `expandtab`: Convert <Tab> keypresses into spaces (Highly recommended).
+-- `expandtab`: Convert <Tab> keypresses into spaces (Highly recommended).
 vim.opt.expandtab = true
 
--- 4. `smartindent`: Tries to guess the correct indent based on syntax.
-vim.opt.smartindent = truej
+--  `smartindent`: Tries to guess the correct indent based on syntax.
+vim.opt.smartindent = true
+
+--show the error in the code line 
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = '●',
+    spacing = 5,
+  },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '󰅚 ',
+      [vim.diagnostic.severity.WARN] = '󰀪 ',
+      [vim.diagnostic.severity.HINT] = '󰌶 ',
+      [vim.diagnostic.severity.INFO] = ' ',
+    },
+  },
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})

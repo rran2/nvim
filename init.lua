@@ -66,6 +66,5 @@ vim.opt.termguicolors = true   -- Use 24-bit colors in terminal
 vim.opt.encoding = "utf-8"     -- Use UTF-8 encoding
 -- Reduce the time Neovim waits for key sequences (important for <Esc>)
 vim.opt.timeoutlen = 300
---confirm whel leaving
+--confirm when leaving
 vim.o.confirm = true
-
