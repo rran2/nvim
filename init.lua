@@ -2,9 +2,7 @@ require("core.keymaps")
 require("core.plugins")
 require("core.treesitter")
 require("core.telescope")
-require("core.proga")
 require("core.plugins_cfg.mason")
-require("core.plugins_cfg.lsp_config")
 require("core.plugins_cfg.completions")
 
 --color theme
@@ -69,3 +67,5 @@ vim.opt.encoding = "utf-8"     -- Use UTF-8 encoding
 vim.opt.timeoutlen = 300
 --confirm when leaving
 vim.o.confirm = true
+
+
