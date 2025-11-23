@@ -67,5 +67,12 @@ vim.opt.encoding = "utf-8"     -- Use UTF-8 encoding
 vim.opt.timeoutlen = 300
 --confirm when leaving
 vim.o.confirm = true
-
-
+--completions for the [,{,(, etc
+-- NO SEU init.lua
+vim.cmd [[
+    inoremap ( ()<Left>
+    inoremap { {}<Left>
+    inoremap [ []<Left>
+    inoremap " ""<Left>
+    inoremap ' ''<Left>
+]]

@@ -27,8 +27,9 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} } 
   }
 --completion and shyt
-  use 'hrsh7th/nvim-cmp'          
-  use 'hrsh7th/cmp-nvim-lsp'      
+  use 'hrsh7th/nvim-cmp'
+  use 'windwp/nvim-autopairs'
+  use 'hrsh7th/cmp-nvim-lsp'
   use 'github/copilot.vim'
   use 'L3MON4D3/Luasnip'
   use {
