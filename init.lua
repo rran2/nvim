@@ -47,8 +47,8 @@ require("bufferline").setup {
     },
 }
 -- tab manipulation
---vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Next Buffer' })
---vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { desc = 'Previous Buffer' })
+vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Next Buffer' })
+vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { desc = 'Previous Buffer' })
 vim.keymap.set('n', '<space>m', ':bdelete<CR>', { desc = 'Close current Buffer' })
 
 -- telescope manipulation
